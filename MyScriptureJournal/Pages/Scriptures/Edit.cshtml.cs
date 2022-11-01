@@ -20,6 +20,7 @@ namespace MyScriptureJournal.Pages.Scriptures
             _context = context;
         }
 
+
         [BindProperty]
         public Scripture Scripture { get; set; } = default!;
 
@@ -36,7 +37,7 @@ namespace MyScriptureJournal.Pages.Scriptures
                 return NotFound();
             }
             Scripture = scripture;
-           ViewData["BookId"] = new SelectList(_context.Set<Book>(), "BookId", "BookId");
+           ViewData["BookId"] = new SelectList(_context.Set<Book>(), "BookId", "BookTitle");
             return Page();
         }
 

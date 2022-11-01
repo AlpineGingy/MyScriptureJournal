@@ -13,6 +13,12 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Scripture.Book)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Scripture.Book.BookTitle)
+        </dd>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Scripture.Chapter)
         </dt>
         <dd class="col-sm-10">
@@ -36,12 +42,7 @@
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Scripture.CreatedDate)
         </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Scripture.Book)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Scripture.Book.BookId)
-        </dd>
+        
     </dl>
     
     <form method="post">

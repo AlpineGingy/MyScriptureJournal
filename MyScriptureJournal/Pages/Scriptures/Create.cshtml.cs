@@ -21,7 +21,7 @@ namespace MyScriptureJournal.Pages.Scriptures
 
         public IActionResult OnGet()
         {
-        ViewData["BookId"] = new SelectList(_context.Set<Book>(), "BookId", "BookId");
+        ViewData["BookId"] = new SelectList(_context.Set<Book>(), "BookId", "BookTitle");
             return Page();
         }
 
@@ -37,6 +37,7 @@ namespace MyScriptureJournal.Pages.Scriptures
                 return Page();
             }
 
+            Scripture.CreatedDate = DateTime.Now;
             _context.Scripture.Add(Scripture);
             await _context.SaveChangesAsync();
 

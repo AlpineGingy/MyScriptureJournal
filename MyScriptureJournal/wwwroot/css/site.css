@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -15,4 +17,16 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+header, footer {
+    background-color: #002E66
+}
+
+nav a {
+    color: #FDE321
+}
+
+h1, h2, h3, p, a, td {
+    font-family: 'Oswald', sans-serif
 }
